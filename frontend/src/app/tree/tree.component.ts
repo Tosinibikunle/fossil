@@ -3,13 +3,13 @@ import {
 } from '@angular/core';
 import { Subscription } from 'rxjs';
 import * as d3 from 'd3';
+import MIN_YEAR,MAX_YEAR from '.../environments/environment'
 
 import { HealthService, TreeNode } from '../services/health.service';
 import { WebSocketService } from '../services/websocket.service';
 import { EventsService, HistoricalEvent } from '../services/events.service';
 
-const MIN_YEAR = 2011;
-const MAX_YEAR = 2024;
+
 const TOTAL_MONTHS = (MAX_YEAR - MIN_YEAR) * 12 + 12; // 168
 const TRANSITION_DURATION = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 150;
 
